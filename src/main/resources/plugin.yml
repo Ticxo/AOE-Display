@@ -1,6 +1,6 @@
-name: Area of Effect Display
+name: AOEDisplay
 version: ${project.version}
-main: com.ticxo.aoedisplay.aoedisplay.AOEDisplay
+main: com.ticxo.aoedisplay.AOEDisplay
 api-version: 1.16
 authors: [ Ticxo ]
 description: Display complexed shapes of attacks on the ground.
