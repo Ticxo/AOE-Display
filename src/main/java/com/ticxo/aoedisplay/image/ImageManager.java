@@ -1,10 +1,12 @@
 package com.ticxo.aoedisplay.image;
 
 import com.ticxo.aoedisplay.AOEDisplay;
+import com.ticxo.aoedisplay.map.MapPalette;
 import org.apache.commons.io.FilenameUtils;
 import org.bukkit.Bukkit;
 
 import javax.imageio.ImageIO;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -48,9 +50,14 @@ public class ImageManager {
 					for(int x = 0; x < bufferedImage.getWidth(); ++x) {
 						int color = bufferedImage.getRGB(x, y);
 						int alpha = (color >> 24) & 0xff;
+						byte colorPixel = MapPalette.matchColor(new Color(color, true));
+
 						mapImage.setPixel(x, y, alpha > 0);
+						mapImage.setColor(x,y, colorPixel);
 					}
 				}
+				// This is from BKCommons
+				// mapImage.setColors(MapColorPalette.convertImage(bufferedImage));
 
 				images.put(id, mapImage);
 			}

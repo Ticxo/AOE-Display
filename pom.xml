@@ -69,6 +69,10 @@
 			<id>sonatype</id>
 			<url>https://oss.sonatype.org/content/groups/public/</url>
 		</repository>
+		<!--<repository> BKCommons
+			<id>dj-tcraft repository</id>
+			<url>https://ci.mg-dev.eu/plugin/repository/everything/</url>
+		</repository>-->
 	</repositories>
 
 	<dependencies>
@@ -79,17 +83,17 @@
 			<version>2.4</version>
 		</dependency>
 		<dependency>
-			<groupId>com.destroystokyo.paper</groupId>
-			<artifactId>paper</artifactId>
-			<version>1.16.5-R0.1-SNAPSHOT</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.20</version>
 			<scope>provided</scope>
 		</dependency>
+		<!--<dependency> BKCommons
+			<groupId>com.bergerkiller.bukkit</groupId>
+			<artifactId>BKCommonLib</artifactId>
+			<version>1.16.5-v3</version>
+			<scope>provided</scope>
+		</dependency>-->
 	</dependencies>
 
 	<distributionManagement>

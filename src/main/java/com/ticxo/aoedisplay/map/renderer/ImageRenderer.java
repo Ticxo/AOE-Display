@@ -2,10 +2,7 @@ package com.ticxo.aoedisplay.map.renderer;
 
 import com.ticxo.aoedisplay.image.MapImage;
 import com.ticxo.aoedisplay.map.GroundDisplay;
-import com.ticxo.aoedisplay.map.MapColor;
-import org.bukkit.Color;
 import org.bukkit.Location;
-import org.bukkit.Particle;
 import org.bukkit.entity.Player;
 
 import java.util.LinkedList;
@@ -76,7 +73,7 @@ public class ImageRenderer implements IRenderer {
 					map.showDisplay(player, loc);
 					visibleMaps.put(loc, map);
 				}
-				map.setColor((mapOffsetX + x) % 16, (mapOffsetZ + z) % 16, image.getPixel(x, z) ? MapColor.RED.getBright() : MapColor.NONE.getBright());
+				map.setColor((mapOffsetX + x) % 16, (mapOffsetZ + z) % 16, image.getColor(x, z));
 			}
 		}
 
