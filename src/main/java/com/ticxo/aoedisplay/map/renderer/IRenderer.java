@@ -8,4 +8,6 @@ public interface IRenderer {
 	void generateCentred(Player player, Location location);
 	void generateCorner(Player player, Location location);
 
+	void remove(Player player);
+
 }
